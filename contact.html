@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Greenfield Group</title>
+  <meta name="description" content="Contact Greenfield Group. Selling a hard-to-value property, or looking for your next site? We'd love to hear from you.">
+  <meta property="og:title" content="Contact Us | Greenfield Group">
+  <meta property="og:description" content="Selling a hard-to-value property, or looking for your next site? We'd love to hear from you.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/gg-logo.png">
+  <link rel="icon" type="image/svg+xml" href="assets/images/gg-logo.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <nav class="header-nav">
+      <div class="container nav-inner">
+        <a href="index.html" class="logo">
+          <img src="assets/images/gg-logo.svg" alt="Greenfield Group Land Solutions" class="logo-dark">
+          <img src="assets/images/gg-logo-white.svg" alt="Greenfield Group Land Solutions" class="logo-light">
+        </a>
+        <ul class="nav-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html" class="active">Contact Us</a></li>
+        </ul>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+    <ul class="mobile-nav">
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1 class="fade-in">Let's Talk</h1>
+      <p class="page-hero-sub fade-in delay-1">Selling a hard-to-value property, or looking for your next site? We'd love to hear from you.</p>
+    </div>
+  </section>
+
+  <!-- Contact Content -->
+  <section class="contact-content">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info fade-in-up">
+          <h2>Get in Touch</h2>
+          <p>Tell us about your property or the site you are looking for and we will come back to you promptly.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <div>
+                <strong>Phone</strong>
+                <span>[PHONE]</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <div>
+                <strong>Email</strong>
+                <span>[EMAIL]</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrapper fade-in-up">
+          <!-- Formspree: replace YOUR_FORM_ID with the live form ID before launch -->
+          <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <input type="hidden" name="_subject" value="New message from Greenfield Group website">
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="form-group">
+              <label for="property-address">Property Address (Optional)</label>
+              <input type="text" id="property-address" name="property_address">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-green btn-full">Send Message</button>
+            <p class="form-success" id="formSuccess" style="display:none; text-align:center; margin-top:16px; color:#2F5D3A; font-weight:500;">Thank you! Your message has been sent.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <img src="assets/images/gg-logo-white.svg" alt="Greenfield Group Land Solutions">
+      </div>
+      <div class="footer-contact">
+        <p>T: [PHONE] | E: [EMAIL]</p>
+      </div>
+      <div class="footer-legal">
+        <p>LEGAL: <a href="privacy.html">Privacy Policy</a> | <a href="cookies.html">Cookies Policy</a></p>
+      </div>
+      <div class="footer-credit">
+        <p>&copy; Greenfield Group | Florida License # [LICENSE #]</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
