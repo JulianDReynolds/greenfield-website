@@ -446,20 +446,28 @@ ul {
   margin-bottom: 20px;
 }
 
-/* --- Image Placeholders (client artwork pending) --- */
-.image-placeholder {
+/* --- Brand Panels (graphic stand-ins until photography is chosen) --- */
+.brand-panel {
   background: linear-gradient(160deg, #E9EDE8 0%, #F7F7F5 100%);
   border: 1px solid #E2E5E0;
   min-height: 340px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #7A8779;
-  font-size: 0.85rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  text-align: center;
-  padding: 24px;
+  padding: 40px;
+}
+
+.brand-panel svg {
+  width: 140px;
+  height: 140px;
+  color: #2F5D3A;
+  opacity: 0.85;
+}
+
+.brand-panel img {
+  height: 200px;
+  width: auto;
+  opacity: 0.9;
 }
 
 /* --- Service Sections (alternating) --- */
@@ -863,8 +871,17 @@ ul {
     order: 0;
   }
 
-  .image-placeholder {
+  .brand-panel {
     min-height: 220px;
+  }
+
+  .brand-panel svg {
+    width: 100px;
+    height: 100px;
+  }
+
+  .brand-panel img {
+    height: 140px;
   }
 
   .contact-grid {
