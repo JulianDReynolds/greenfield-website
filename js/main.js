@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   handleScroll();
 
   // --- Rotating hero catchphrase ---
-  // Each phrase shows for 2s, then cross-dissolves (500ms) into the next.
+  // Each phrase shows for 2.5s, then switches instantly to the next.
   const phrases = document.querySelectorAll('.hero-phrase');
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (phrases.length > 1 && !reduceMotion) {

@@ -289,16 +289,11 @@ ul {
   letter-spacing: -0.02em;
   line-height: 1.1;
   opacity: 0;
-  transition: opacity 0.5s ease;
   padding: 0 12px;
 }
 
 .hero-phrase.current {
   opacity: 1;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero-phrase { transition: none; }
 }
 
 /* --- Page Hero (inner pages) --- */
