@@ -394,15 +394,16 @@ ul {
 }
 
 .teaser-icon {
-  width: 48px;
-  height: 48px;
+  height: 56px;
   margin: 0 auto 24px;
-  color: #2F5D3A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.teaser-icon svg {
-  width: 100%;
-  height: 100%;
+.teaser-icon img {
+  max-height: 100%;
+  width: auto;
 }
 
 .teaser-card h3 {
