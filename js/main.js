@@ -73,23 +73,23 @@ document.addEventListener('DOMContentLoaded', () => {
         headers: { 'Accept': 'application/json' }
       }).then(response => {
         if (response.ok) {
-          btn.textContent = 'Message Sent!';
+          btn.textContent = 'Message sent!';
           form.reset();
           if (success) success.style.display = 'block';
           setTimeout(() => {
-            btn.textContent = 'Send Message';
+            btn.textContent = 'Send message';
             btn.disabled = false;
             if (success) success.style.display = 'none';
           }, 5000);
         } else {
-          btn.textContent = 'Error. Please Try Again';
+          btn.textContent = 'Error. Please try again';
           btn.disabled = false;
-          setTimeout(() => { btn.textContent = 'Send Message'; }, 3000);
+          setTimeout(() => { btn.textContent = 'Send message'; }, 3000);
         }
       }).catch(() => {
-        btn.textContent = 'Error. Please Try Again';
+        btn.textContent = 'Error. Please try again';
         btn.disabled = false;
-        setTimeout(() => { btn.textContent = 'Send Message'; }, 3000);
+        setTimeout(() => { btn.textContent = 'Send message'; }, 3000);
       });
     });
   }

@@ -53,10 +53,9 @@ ul {
 .btn {
   display: inline-block;
   padding: 14px 36px;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  letter-spacing: 0.03em;
   border: 2px solid transparent;
   cursor: pointer;
   transition: all 0.3s ease;
