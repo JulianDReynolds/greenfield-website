@@ -52,8 +52,8 @@ ul {
 /* --- Buttons --- */
 .btn {
   display: inline-block;
-  padding: 14px 36px;
-  font-size: 0.95rem;
+  padding: 11px 33px;
+  font-size: 1.14rem;
   font-weight: 600;
   letter-spacing: 0.03em;
   border: 2px solid transparent;
