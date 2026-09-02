@@ -887,9 +887,9 @@ p + p { margin-top: 1em; }
   padding-bottom: 40px;
   border-bottom: 1px solid var(--rule-on-black);
 }
-.footer-logos { display: flex; align-items: center; gap: 24px; }
+.footer-logos { display: flex; flex-wrap: nowrap; align-items: center; gap: 24px; }
 .footer-logos img { height: 56px; width: auto; }
-.footer-logos img.kw { height: 44px; padding-left: 24px; border-left: 1px solid var(--rule-on-black); }
+.footer-logos img.kw { height: 35px; padding-left: 24px; border-left: 1px solid var(--rule-on-black); }
 .footer-logo p { margin-top: 18px; color: var(--grey-light); max-width: 34ch; font-size: 0.95rem; }
 .footer-col h3 {
   font-size: 0.72rem;
