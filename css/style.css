@@ -380,7 +380,9 @@ p + p { margin-top: 1em; }
   position: relative;
   z-index: 1;
   width: 100%;
-  padding: 140px 0 0;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 140px var(--gutter) clamp(56px, 18vh, 180px);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -974,7 +976,7 @@ p + p { margin-top: 1em; }
   .sign-board { padding: 34px var(--gutter) 40px; }
   .sign-caption { font-size: 0.85rem; }
   .sign-inset { top: 16px; left: 16px; width: 36%; }
-  .hero-inner { padding: 110px 0 0; }
+  .hero-inner { padding: 110px var(--gutter) clamp(40px, 12vh, 100px); }
 
   .page-hero { min-height: min(50vh, 480px); }
 
