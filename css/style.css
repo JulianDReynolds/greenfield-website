@@ -342,6 +342,7 @@ p + p { margin-top: 1em; }
   max-width: 52ch;
 }
 .board-copy strong { color: var(--white); font-weight: 700; }
+.board-callout { font-size: clamp(1.5rem, 1.4rem + 0.45vw, 1.75rem); line-height: 1.35; color: var(--white); font-weight: 700; }
 .board .btn { margin-top: 30px; }
 /* Rotating phrase inside the board line */
 .rotator {
@@ -457,9 +458,7 @@ p + p { margin-top: 1em; }
   object-position: center top;
 }
 .deliverable-figure img.fig-plan {
-  object-position: 30% 60%;
-  transform: scale(1.5);
-  transform-origin: 30% 60%;
+  object-position: center 42%;
 }
 .deliverable-body { padding: 24px 26px 28px; }
 .deliverable h3 { font-size: 1.05rem; }
