@@ -199,13 +199,11 @@ p + p { margin-top: 1em; }
   max-width: var(--max);
   margin: 0 auto;
 }
-.site-header.scrolled .nav-inner { height: 68px; }
 
 .logo img {
   height: 68px;
   width: auto;
 }
-.site-header.scrolled .logo img { height: 57px; }
 
 .nav-links {
   display: flex;
@@ -381,9 +379,7 @@ p + p { margin-top: 1em; }
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 140px var(--gutter) 0;
+  padding: 140px 0 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -459,10 +455,11 @@ p + p { margin-top: 1em; }
   height: 100%;
   object-fit: cover;
   object-position: center top;
-  transition: transform 800ms var(--ease-out);
 }
-@media (hover: hover) and (pointer: fine) {
-  .deliverable:hover .deliverable-figure img { transform: scale(1.03); }
+.deliverable-figure img.fig-plan {
+  object-position: 30% 60%;
+  transform: scale(1.5);
+  transform-origin: 30% 60%;
 }
 .deliverable-body { padding: 24px 26px 28px; }
 .deliverable h3 { font-size: 1.05rem; }
@@ -487,16 +484,23 @@ p + p { margin-top: 1em; }
 }
 .offer-foot p { max-width: 60ch; color: var(--grey); }
 
-/* ---------- Signboards (services) ---------- */
+/* ---------- Signboards (services): photo column + board column ---------- */
 .sign {
   position: relative;
-  min-height: min(84vh, 820px);
-  display: flex;
-  align-items: flex-end;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: min(90vh, 900px);
   background: var(--black);
   color: var(--white);
   overflow: hidden;
 }
+.sign-photo {
+  position: relative;
+  grid-column: 1;
+  grid-row: 1;
+  min-height: 100%;
+}
+.sign-right .sign-photo { grid-column: 2; }
 .sign-media {
   position: absolute;
   inset: 0;
@@ -505,35 +509,37 @@ p + p { margin-top: 1em; }
   object-fit: cover;
 }
 .sign-inner {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 120px var(--gutter) 0;
+  grid-column: 2;
+  grid-row: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  justify-content: center;
 }
-.sign-right .sign-inner { align-items: flex-end; }
-.sign-board { width: min(100%, 600px); }
+.sign-right .sign-inner { grid-column: 1; }
+.sign-board {
+  width: 100%;
+  padding: clamp(40px, 6vw, 96px) clamp(36px, 6vw, 96px);
+}
 .sign-caption {
-  margin: 16px 0 0;
-  padding: 9px 14px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 11px 16px;
   background: var(--black);
-  font-size: 0.75rem;
+  font-size: 0.975rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.82);
+  color: rgba(255, 255, 255, 0.86);
 }
-.sign-right .sign-caption { align-self: flex-start; }
+.sign-right .sign-caption { left: auto; right: 0; }
 .sign-inset {
   position: absolute;
   z-index: 1;
-  top: 120px;
-  right: var(--gutter);
-  width: min(30%, 300px);
+  top: 24px;
+  left: 24px;
+  width: min(34%, 300px);
   background: var(--white);
   padding: 8px;
 }
@@ -578,10 +584,6 @@ p + p { margin-top: 1em; }
 }
 .pair figcaption span { color: var(--grey); font-weight: 400; letter-spacing: 0; text-transform: none; display: block; margin-top: 2px; }
 
-/* ---------- Evidence pair (older homes) ---------- */
-.evidence { padding: clamp(40px, 6vw, 72px) 0 var(--section); background: var(--white); }
-.pair-wide { max-width: 1100px; }
-
 /* ---------- Track record (black, inverted boards) ---------- */
 .record {
   background: var(--black);
@@ -619,6 +621,9 @@ p + p { margin-top: 1em; }
   line-height: 1;
 }
 .figures span { font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.7); }
+.figures-light { border-color: var(--rule); margin: clamp(40px, 6vw, 72px) 0 0; }
+.figures-light div { border-left-color: var(--rule); }
+.figures-light span { color: var(--grey); }
 
 .ledger {
   display: grid;
@@ -921,7 +926,6 @@ p + p { margin-top: 1em; }
   .reveal, .reveal-clip { opacity: 1; transform: none; clip-path: none; transition: none; }
   .hero-board { animation: none; }
   .rotator .phrase { transition: none; filter: none; }
-  .deliverable-figure img { transition: none; }
 }
 
 /* ---------- Responsive ---------- */
@@ -965,12 +969,11 @@ p + p { margin-top: 1em; }
   .hero-board { margin-top: 0; }
 
   .sign { min-height: 0; display: block; }
-  .sign-media { position: relative; height: 62vw; min-height: 300px; }
-  .sign-inner { padding: 0; }
-  .sign-board { width: 100%; }
-  .sign-caption { margin: 0; align-self: flex-start; }
-  .sign-right .sign-inner { align-items: stretch; }
-  .sign-inset { top: auto; bottom: calc(100% - 62vw + 16px); right: 16px; width: 34%; }
+  .sign-photo { aspect-ratio: 4 / 5; min-height: 0; }
+  .sign-board { padding: 34px var(--gutter) 40px; }
+  .sign-caption { font-size: 0.85rem; }
+  .sign-inset { top: 16px; left: 16px; width: 36%; }
+  .hero-inner { padding: 110px 0 0; }
 
   .page-hero { min-height: min(50vh, 480px); }
 
@@ -980,7 +983,6 @@ p + p { margin-top: 1em; }
 @media (max-width: 480px) {
   html { font-size: 15px; }
   .logo img { height: 57px; }
-  .site-header.scrolled .logo img { height: 50px; }
   .nav-inner { height: 72px; }
   .board { padding: 26px 22px 28px; }
   .board-tag { margin: -26px -22px 24px; padding: 10px 22px; }
