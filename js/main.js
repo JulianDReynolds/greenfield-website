@@ -1,97 +1,106 @@
 // ============================================
-// GREENFIELD GROUP - Main JS
+// GREENFIELD GROUP  |  Main JS
 // ============================================
 
 document.addEventListener('DOMContentLoaded', () => {
-
-  // --- Header scroll effect ---
-  const header = document.querySelector('.site-header');
-  const handleScroll = () => {
-    header.classList.toggle('scrolled', window.scrollY > 50);
-  };
-  window.addEventListener('scroll', handleScroll, { passive: true });
-  handleScroll();
-
-  // --- Rotating hero catchphrase ---
-  // Each phrase shows for 2.5s, then switches instantly to the next.
-  const phrases = document.querySelectorAll('.hero-phrase');
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // --- Header: black bar once the page scrolls ---
+  const header = document.querySelector('.site-header');
+  if (header) {
+    const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 40);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
+  // --- Rotating property-type phrase on the hero board ---
+  // Each phrase holds for 2s, then cross-dissolves over 500ms.
+  const phrases = document.querySelectorAll('.rotator .phrase');
   if (phrases.length > 1 && !reduceMotion) {
-    let current = 0;
+    let i = 0;
     setInterval(() => {
-      phrases[current].classList.remove('current');
-      current = (current + 1) % phrases.length;
-      phrases[current].classList.add('current');
+      phrases[i].classList.remove('current');
+      i = (i + 1) % phrases.length;
+      phrases[i].classList.add('current');
     }, 2500);
   }
 
-  // --- Mobile menu toggle ---
-  const toggle = document.querySelector('.mobile-menu-toggle');
+  // --- Mobile menu ---
+  const toggle = document.querySelector('.menu-toggle');
   const mobileNav = document.querySelector('.mobile-nav');
-
   if (toggle && mobileNav) {
-    toggle.addEventListener('click', () => {
-      toggle.classList.toggle('active');
-      mobileNav.classList.toggle('open');
-      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
-    });
-
-    mobileNav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        toggle.classList.remove('active');
-        mobileNav.classList.remove('open');
-        document.body.style.overflow = '';
-      });
+    const setOpen = (open) => {
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      mobileNav.classList.toggle('open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+      if (open) header.classList.add('scrolled');
+    };
+    toggle.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true'));
+    mobileNav.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setOpen(false)));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileNav.classList.contains('open')) setOpen(false);
     });
   }
 
-  // --- Scroll reveal animations ---
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
-
-  document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+  // --- Reveal on scroll ---
+  const targets = document.querySelectorAll('.reveal, .reveal-clip');
+  if (targets.length) {
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+      targets.forEach((el) => el.classList.add('visible'));
+    } else {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      targets.forEach((el) => io.observe(el));
+    }
+  }
 
   // --- Contact form (Formspree) ---
   const form = document.getElementById('contactForm');
   if (form) {
+    const btn = form.querySelector('button[type="submit"]');
+    const status = document.getElementById('formStatus');
+    const idle = btn.textContent;
+
+    const say = (text, isError) => {
+      if (!status) return;
+      status.textContent = text;
+      status.classList.toggle('error', Boolean(isError));
+      status.hidden = false;
+    };
+
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      const btn = form.querySelector('button[type="submit"]');
-      const success = document.getElementById('formSuccess');
       btn.disabled = true;
-      btn.textContent = 'Sending...';
+      btn.textContent = 'Sending';
+      if (status) status.hidden = true;
 
       fetch(form.action, {
         method: 'POST',
         body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-      }).then(response => {
-        if (response.ok) {
-          btn.textContent = 'Message sent!';
-          form.reset();
-          if (success) success.style.display = 'block';
-          setTimeout(() => {
-            btn.textContent = 'Send message';
-            btn.disabled = false;
-            if (success) success.style.display = 'none';
-          }, 5000);
-        } else {
-          btn.textContent = 'Error. Please try again';
+        headers: { Accept: 'application/json' },
+      })
+        .then((res) => {
+          if (res.ok) {
+            form.reset();
+            say('Thank you. Your message has been sent and we will come back to you promptly.');
+            btn.textContent = 'Message sent';
+            setTimeout(() => { btn.textContent = idle; btn.disabled = false; }, 4000);
+          } else {
+            throw new Error('Formspree error');
+          }
+        })
+        .catch(() => {
+          say('Your message could not be sent. Please try again, or call +1 214-779-0922.', true);
+          btn.textContent = idle;
           btn.disabled = false;
-          setTimeout(() => { btn.textContent = 'Send message'; }, 3000);
-        }
-      }).catch(() => {
-        btn.textContent = 'Error. Please try again';
-        btn.disabled = false;
-        setTimeout(() => { btn.textContent = 'Send message'; }, 3000);
-      });
+        });
     });
   }
-
 });

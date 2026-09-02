@@ -4,128 +4,160 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services | Greenfield Group</title>
-  <meta name="description" content="Greenfield Group services: teardown houses, vacant land, obsolete commercial, and master planned communities across Florida.">
+  <meta name="description" content="Greenfield Group sells older homes, vacant land, commercial redevelopment sites, and master planned community land across Florida, priced on development yield.">
+  <meta name="robots" content="noindex, follow">
   <meta property="og:title" content="Services | Greenfield Group">
-  <meta property="og:description" content="Teardown houses, vacant land, obsolete commercial, and master planned communities across Florida.">
+  <meta property="og:description" content="Older homes, vacant land, commercial redevelopment sites, and master planned communities. Site plan, architect's concept, and engineer's site analysis, free with your listing.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/images/gg-logo.png">
-  <meta name="robots" content="noindex">
   <link rel="icon" type="image/svg+xml" href="assets/images/gg-logo.svg">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/fonts/arquitecta-heavy.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="assets/fonts/arquitecta-regular.otf" as="font" type="font/otf" crossorigin>
+  <link rel="stylesheet" href="css/style.css?v=20260902">
 </head>
 <body>
 
   <!-- Header -->
-  <header class="site-header">
-    <nav class="header-nav">
-      <div class="container nav-inner">
-        <a href="index.html" class="logo">
-          <img src="assets/images/gg-logo.svg" alt="Greenfield Group Land Solutions" class="logo-dark">
-          <img src="assets/images/gg-logo-white.svg" alt="Greenfield Group Land Solutions" class="logo-light">
-        </a>
-        <ul class="nav-links">
-          <li><a href="about.html">About us</a></li>
-          <li><a href="contact.html">Contact us</a></li>
-        </ul>
-        <button class="mobile-menu-toggle" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
+  <header class="site-header solid">
+    <div class="nav-inner">
+      <a href="index.html" class="logo" aria-label="Greenfield Group Land Solutions, home">
+        <img src="assets/images/gg-logo-white.svg" alt="Greenfield Group Land Solutions" width="455" height="168">
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="about.html">About us</a>
+        <a href="contact.html">Contact us</a>
+        <a href="contact.html" class="nav-cta">Book a free analysis</a>
+      </nav>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+      <a href="index.html">Home</a>
+      <a href="about.html">About us</a>
+      <a href="contact.html">Contact us</a>
+      <a href="contact.html" class="btn btn-white">Book a free analysis</a>
+      <p class="mobile-nav-contact">
+        <a href="tel:+12147790922">+1 214-779-0922</a><br>
+        <a href="mailto:sales@greenfieldfl.com">sales@greenfieldfl.com</a>
+      </p>
     </nav>
-    <ul class="mobile-nav">
-      <li><a href="about.html">About us</a></li>
-      <li><a href="contact.html">Contact us</a></li>
-    </ul>
   </header>
 
-  <!-- Page Hero -->
-  <section class="page-hero">
-    <div class="container">
-      <h1 class="fade-in">Services</h1>
-    </div>
-  </section>
+  <main>
 
-  <!-- Service Sections -->
-  <section class="service-sections">
-    <div class="container">
-
-      <div class="service-block fade-in-up" id="teardown-houses">
-        <div class="service-media">
-          <div class="brand-panel">
-            <img src="assets/images/icon-teardown.png" alt="Icon of a house outline with a hammer and pry bar">
-          </div>
-        </div>
-        <div class="service-text">
-          <h2>Older homes. New possibilities</h2>
-          <p>Homes with limited remaining use but strong underlying land value. We fully investigate each site's development potential and market the property on that basis, not just its current condition. By creating genuine competition among developers and builders, we give owners certainty that they are receiving the highest and best offer available in the market.</p>
+    <!-- Page hero (black board) -->
+    <section class="page-hero compact" aria-labelledby="servicesHead">
+      <div class="page-hero-inner">
+        <div class="board">
+          <h1 class="board-head" id="servicesHead"><img class="mark" src="assets/images/gg-mark-solo-white.svg" alt="" aria-hidden="true"><span>Four kinds of property. One offer.</span></h1>
+          <p class="board-copy">Site plan. Architect's concept. Engineer's site analysis. All free with your listing.</p>
         </div>
       </div>
+    </section>
 
-      <div class="service-block fade-in-up" id="vacant-land">
-        <div class="service-media">
-          <div class="brand-panel">
-            <img src="assets/images/icon-vacant-land.png" alt="Icon of a land parcel with a survey stake">
-          </div>
+    <!-- Service 1: Older homes -->
+    <section class="split" id="teardown-houses" aria-labelledby="olderHead">
+      <div class="container split-grid">
+        <div class="board reveal">
+          <h2 class="board-head" id="olderHead"><img class="mark" src="assets/images/gg-mark-solo-white.svg" alt="" aria-hidden="true"><span>Your property is a developer's dream.</span></h2>
+          <p class="board-copy">Homes with limited remaining use but strong underlying land value. We fully investigate each site's development potential and market the property on that basis, not just its current condition. By creating genuine competition among developers and builders, we give owners certainty that they are receiving the highest and best offer available in the market.</p>
+          <a href="contact.html" class="btn btn-white">Book an appointment</a>
         </div>
-        <div class="service-text">
-          <h2>Vacant land</h2>
-          <p>Infill lots and undeveloped acreage across Florida. Our expertise in zoning and entitlements ensures accurate valuation and positioning, so land is priced on what can be built rather than what sits there today.</p>
+        <div class="pair">
+          <figure class="reveal-clip">
+            <img src="assets/images/site/older-home-existing.webp" alt="Aerial photo of a single story house on an 8,000 square foot lot with the lot boundary outlined" loading="lazy" width="800" height="900">
+            <figcaption>1. Existing house <span>Single story, about 30% of the lot</span></figcaption>
+          </figure>
+          <figure class="reveal-clip">
+            <img src="assets/images/site/older-home-proposed.webp" alt="Rendering of the proposed two story home with pool on the same lot" loading="lazy" width="889" height="828">
+            <figcaption>2. Proposed development <span>Same lot, about 60% building coverage</span></figcaption>
+          </figure>
         </div>
       </div>
+    </section>
 
-      <div class="service-block fade-in-up" id="obsolete-commercial">
-        <div class="service-media">
-          <div class="brand-panel">
-            <img src="assets/images/icon-commercial.png" alt="Icon of a storefront with a For Sale sign">
-          </div>
+    <!-- Service 2: Vacant land -->
+    <section class="sign sign-right" id="vacant-land" aria-labelledby="landHead">
+      <img class="sign-media" src="assets/images/site/community-aerial-2.webp" alt="Aerial view of vacant land beside a newly built community" loading="lazy" width="1600" height="1066">
+      <div class="sign-inner">
+        <div class="sign-board board reveal">
+          <h2 class="board-head" id="landHead"><img class="mark" src="assets/images/gg-mark-solo-white.svg" alt="" aria-hidden="true"><span>Priced by the acre, sold by the lot. Keep the difference.</span></h2>
+          <p class="board-copy">Infill lots and undeveloped acreage across Florida. Our expertise in zoning and entitlements ensures accurate valuation and positioning, so land is priced on what can be built rather than what sits there today.</p>
+          <a href="contact.html" class="btn btn-white">Book an appointment</a>
         </div>
-        <div class="service-text">
-          <h2>Commercial redevelopment sites</h2>
-          <p>Underperforming retail and office properties with redevelopment or repositioning potential. We identify the exit strategy the traditional market misses, and connect these assets with the buyers actively seeking them.</p>
-        </div>
+        <p class="sign-caption">Vacant land. The Reserve at Flores Valley, Texas</p>
       </div>
+    </section>
 
-      <div class="service-block fade-in-up" id="master-planned-communities">
-        <div class="service-media">
-          <div class="brand-panel">
-            <img src="assets/images/icon-master-planned.png" alt="Icon of a site plan with a drafting compass">
-          </div>
+    <!-- Service 3: Commercial redevelopment -->
+    <section class="sign" id="obsolete-commercial" aria-labelledby="commercialHead">
+      <img class="sign-media" src="assets/images/site/avalon-front.webp" alt="Rendering of a mixed use building replacing an older commercial block on a city corner" loading="lazy" width="2000" height="1574">
+      <figure class="sign-inset">
+        <img src="assets/images/site/avalon-before.webp" alt="The same corner today: a three story commercial building" loading="lazy" width="1600" height="796">
+        <figcaption>The Avalon, today</figcaption>
+      </figure>
+      <div class="sign-inner">
+        <div class="sign-board board reveal">
+          <h2 class="board-head" id="commercialHead"><img class="mark" src="assets/images/gg-mark-solo-white.svg" alt="" aria-hidden="true"><span>Stop valuing the rent roll. Start valuing the land.</span></h2>
+          <p class="board-copy">Underperforming retail and office properties with redevelopment or repositioning potential. We identify the exit strategy the traditional market misses, and connect these assets with the buyers actively seeking them.</p>
+          <a href="contact.html" class="btn btn-white">Book an appointment</a>
         </div>
-        <div class="service-text">
-          <h2>Master planned communities</h2>
-          <p>For owners of major acreage across Florida, we bring entitlement and development expertise to bear on maximizing land value. We evaluate the highest-and-best use for large tracts, guide owners through the entitlement process, and partner them with best-in-class community developers. We structure transactions and joint ventures that capture the full development value of the land, not just its raw acreage price.</p>
-        </div>
+        <p class="sign-caption">Commercial redevelopment. The Avalon, concept</p>
       </div>
+    </section>
 
-      <div class="section-cta fade-in-up">
-        <a href="contact.html" class="btn btn-green">Book an appointment</a>
+    <!-- Service 4: Master planned communities -->
+    <section class="sign sign-right" id="master-planned-communities" aria-labelledby="masterHead">
+      <img class="sign-media" src="assets/images/site/community-aerial.webp" alt="Aerial view of a master planned community with homes, amenity center, and open land beyond" loading="lazy" width="2000" height="1332">
+      <div class="sign-inner">
+        <div class="sign-board board reveal">
+          <h2 class="board-head" id="masterHead"><img class="mark" src="assets/images/gg-mark-solo-white.svg" alt="" aria-hidden="true"><span>Don't sell your land to the middleman. Be the middleman.</span></h2>
+          <p class="board-copy">For owners of major acreage across Florida, we bring entitlement and development expertise to bear on maximizing land value. We evaluate the highest-and-best use for large tracts, guide owners through the entitlement process, and partner them with best-in-class community developers. We structure transactions and joint ventures that capture the full development value of the land, not just its raw acreage price.</p>
+          <a href="contact.html" class="btn btn-white">Book an appointment</a>
+        </div>
+        <p class="sign-caption">Master planned communities. The Reserve at Flores Valley, Texas</p>
       </div>
-    </div>
-  </section>
+    </section>
+
+  </main>
 
   <!-- Footer -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-logo">
-        <img src="assets/images/gg-logo-white.svg" alt="Greenfield Group Land Solutions">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-logo">
+          <img src="assets/images/gg-logo-white.svg" alt="Greenfield Group Land Solutions" width="455" height="168">
+          <p>A Florida real estate practice focused on development property. Boca Raton, Florida.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Services</h3>
+          <a href="index.html#older-homes">Older homes</a>
+          <a href="index.html#vacant-land">Vacant land</a>
+          <a href="index.html#commercial">Commercial sites</a>
+          <a href="index.html#master-planned">Master planned communities</a>
+        </div>
+        <div class="footer-col">
+          <h3>Company</h3>
+          <a href="about.html">About us</a>
+          <a href="contact.html">Contact us</a>
+          <a href="privacy.html">Privacy policy</a>
+          <a href="cookies.html">Cookies policy</a>
+        </div>
+        <div class="footer-col">
+          <h3>Contact</h3>
+          <a href="tel:+12147790922">+1 214-779-0922</a>
+          <a href="mailto:sales@greenfieldfl.com">sales@greenfieldfl.com</a>
+          <span>Boca Raton, Florida</span>
+        </div>
       </div>
-      <div class="footer-contact">
-        <p>T: +1 214-779-0922 | E: sales@greenfieldfl.com</p>
-      </div>
-      <div class="footer-legal">
-        <p>LEGAL: <a href="privacy.html">Privacy policy</a> | <a href="cookies.html">Cookies policy</a></p>
-      </div>
-      <div class="footer-credit">
-        <p>&copy; Greenfield Group | Florida License SL3660901</p>
+      <div class="footer-bottom">
+        <p>&copy; Greenfield Group</p>
+        <p>Florida License SL3660901</p>
       </div>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=20260902"></script>
 </body>
 </html>

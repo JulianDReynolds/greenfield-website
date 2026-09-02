@@ -1,2 +1,7 @@
 .DS_Store
 design-input/
+.claude/
+.impeccable/build/
+.impeccable/review/
+.impeccable/mocks/
+.impeccable/config.local.json

@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-02T00:00:00Z",
+  "title": "Design System: Greenfield Group, Land Solutions",
+  "precedence": "A designer-supplied DESIGN.md is expected and takes precedence over this record when it arrives.",
+  "extensions": {
+    "colorMeta": {
+      "board-black": { "role": "primary", "displayName": "Board Black", "canonical": "#0A0A0A", "tonalRamp": ["oklch(15% 0 0)", "oklch(25% 0 0)", "oklch(35% 0 0)", "oklch(45% 0 0)", "oklch(55% 0 0)", "oklch(70% 0 0)", "oklch(85% 0 0)", "oklch(95% 0 0)"] },
+      "ink": { "role": "primary", "displayName": "Ink", "canonical": "#141414", "tonalRamp": ["oklch(15% 0 0)", "oklch(25% 0 0)", "oklch(35% 0 0)", "oklch(45% 0 0)", "oklch(55% 0 0)", "oklch(70% 0 0)", "oklch(85% 0 0)", "oklch(95% 0 0)"] },
+      "white": { "role": "neutral", "displayName": "White", "canonical": "#FFFFFF", "tonalRamp": ["oklch(15% 0 0)", "oklch(25% 0 0)", "oklch(35% 0 0)", "oklch(45% 0 0)", "oklch(55% 0 0)", "oklch(70% 0 0)", "oklch(85% 0 0)", "oklch(99% 0 0)"] },
+      "paper": { "role": "neutral", "displayName": "Paper", "canonical": "#EDEBE6", "tonalRamp": ["oklch(18% 0.006 85)", "oklch(28% 0.006 85)", "oklch(40% 0.006 85)", "oklch(52% 0.006 85)", "oklch(64% 0.006 85)", "oklch(76% 0.006 85)", "oklch(88% 0.006 85)", "oklch(94% 0.006 85)"] },
+      "paper-deep": { "role": "neutral", "displayName": "Paper Deep", "canonical": "#E2DFD8", "tonalRamp": ["oklch(18% 0.008 85)", "oklch(28% 0.008 85)", "oklch(40% 0.008 85)", "oklch(52% 0.008 85)", "oklch(64% 0.008 85)", "oklch(76% 0.008 85)", "oklch(84% 0.008 85)", "oklch(90% 0.008 85)"] },
+      "grey": { "role": "neutral", "displayName": "Grey", "canonical": "#5E5D59", "tonalRamp": ["oklch(15% 0.004 85)", "oklch(25% 0.004 85)", "oklch(35% 0.004 85)", "oklch(46% 0.004 85)", "oklch(55% 0.004 85)", "oklch(70% 0.004 85)", "oklch(85% 0.004 85)", "oklch(95% 0.004 85)"] },
+      "grey-light": { "role": "neutral", "displayName": "Grey Light", "canonical": "#A9A8A3", "tonalRamp": ["oklch(15% 0.004 85)", "oklch(25% 0.004 85)", "oklch(35% 0.004 85)", "oklch(45% 0.004 85)", "oklch(55% 0.004 85)", "oklch(72% 0.004 85)", "oklch(85% 0.004 85)", "oklch(95% 0.004 85)"] },
+      "rule": { "role": "neutral", "displayName": "Rule", "canonical": "rgba(10, 10, 10, 0.14)", "tonalRamp": [] },
+      "rule-on-black": { "role": "neutral", "displayName": "Rule on Black", "canonical": "rgba(255, 255, 255, 0.22)", "tonalRamp": [] },
+      "copy-on-black": { "role": "neutral", "displayName": "Copy on Black", "canonical": "rgba(255, 255, 255, 0.86)", "tonalRamp": [] },
+      "caption-on-black": { "role": "neutral", "displayName": "Caption on Black", "canonical": "rgba(255, 255, 255, 0.82)", "tonalRamp": [] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Section headings on white and black page sections. Heavy caps, balanced wrap." },
+      "headline": { "displayName": "Board Headline", "purpose": "The signboard headline, always preceded by the key mark." },
+      "title": { "displayName": "Card Title", "purpose": "Deliverable card titles and legal subheadings." },
+      "figure": { "displayName": "Figure", "purpose": "Measured figures in the track-record strip, tabular numerals." },
+      "lead": { "displayName": "Lead", "purpose": "The positioning statement under the hero." },
+      "body": { "displayName": "Body", "purpose": "Running copy on white and paper grounds." },
+      "board-copy": { "displayName": "Board Copy", "purpose": "The paragraph inside a board, 52ch cap, 86% white." },
+      "button": { "displayName": "Button", "purpose": "All button labels." },
+      "nav": { "displayName": "Nav", "purpose": "Header links and the boxed header CTA." },
+      "label": { "displayName": "Label", "purpose": "Caption tabs, figure captions, ledger and gallery captions." },
+      "label-small": { "displayName": "Label Small", "purpose": "Form labels, contact-row keys, source lines, footer column headings." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "ease-out", "value": "cubic-bezier(0.23, 1, 0.32, 1)", "purpose": "Reveals, board entrance, nav underline, press scale." },
+      { "name": "ease-in-out", "value": "cubic-bezier(0.77, 0, 0.175, 1)", "purpose": "Defined on :root for symmetric transitions; unused in the shipped build." },
+      { "name": "state", "value": "180ms ease", "purpose": "Button and link fill, text, and border inversion." },
+      { "name": "press", "value": "160ms ease-out, scale(0.97)", "purpose": "Active state on buttons and the header CTA." },
+      { "name": "reveal", "value": "700ms ease-out, translateY(22px) to 0, opacity 0 to 1, stagger 70ms", "purpose": "Scroll reveal of boards, copy, and cards." },
+      { "name": "reveal-clip", "value": "1000ms ease-out, clip-path inset(0 0 100% 0) to inset(0)", "purpose": "Photographs unclip from the top." },
+      { "name": "board-in", "value": "900ms ease-out, delay 120ms, translateY(24px) to 0", "purpose": "Hero board entrance." },
+      { "name": "rotator", "value": "500ms ease, opacity and blur(4px) cross-dissolve, 2500ms hold", "purpose": "Hero property-type tab. Held still under prefers-reduced-motion." },
+      { "name": "header", "value": "240ms ease background, 220ms ease-out menu panel", "purpose": "Header turns opaque after 40px scroll; mobile menu fades and rises 8px." }
+    ],
+    "breakpoints": [
+      { "name": "lg", "value": "1024px" },
+      { "name": "md", "value": "860px" },
+      { "name": "sm", "value": "480px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Black Button",
+      "kind": "button",
+      "refersTo": "button-black",
+      "description": "Primary action on white and paper grounds. Inverts to white on hover.",
+      "html": "<a class=\"ds-btn ds-btn-black\" href=\"#\">Book a free analysis</a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 52px; padding: 0 30px; font-family: var(--font, 'Arquitecta', 'Helvetica Neue', Arial, sans-serif); font-weight: 700; font-size: 0.875rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; border: 1.5px solid currentColor; border-radius: 0; white-space: nowrap; cursor: pointer; transition: background-color 180ms ease, color 180ms ease, transform 160ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-btn:active { transform: scale(0.97); } .ds-btn:focus-visible { outline: 2px solid var(--black, #0A0A0A); outline-offset: 3px; } .ds-btn-black { background: var(--black, #0A0A0A); color: var(--white, #FFFFFF); border-color: var(--black, #0A0A0A); } .ds-btn-black:hover { background: var(--white, #FFFFFF); color: var(--black, #0A0A0A); }"
+    },
+    {
+      "name": "White Button",
+      "kind": "button",
+      "refersTo": "button-white",
+      "description": "Primary action inside a black board. Hover goes transparent with a white border.",
+      "html": "<div style=\"background:#0A0A0A;padding:24px;display:inline-block\"><a class=\"ds-btn ds-btn-white\" href=\"#\">Book a free analysis</a></div>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 52px; padding: 0 30px; font-family: var(--font, 'Arquitecta', 'Helvetica Neue', Arial, sans-serif); font-weight: 700; font-size: 0.875rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; border: 1.5px solid currentColor; border-radius: 0; white-space: nowrap; cursor: pointer; transition: background-color 180ms ease, color 180ms ease, transform 160ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-btn:active { transform: scale(0.97); } .ds-btn-white { background: var(--white, #FFFFFF); color: var(--black, #0A0A0A); border-color: var(--white, #FFFFFF); } .ds-btn-white:hover { background: transparent; color: var(--white, #FFFFFF); } .ds-btn-white:focus-visible { outline: 2px solid var(--white, #FFFFFF); outline-offset: 3px; }"
+    },
+    {
+      "name": "Outline Black Button",
+      "kind": "button",
+      "refersTo": "button-outline-black",
+      "description": "Secondary action on white. Fills black on hover.",
+      "html": "<a class=\"ds-btn ds-btn-outline-black\" href=\"#\">About Greenfield Group</a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 52px; padding: 0 30px; font-family: var(--font, 'Arquitecta', 'Helvetica Neue', Arial, sans-serif); font-weight: 700; font-size: 0.875rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; border: 1.5px solid currentColor; border-radius: 0; white-space: nowrap; cursor: pointer; transition: background-color 180ms ease, color 180ms ease, transform 160ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-btn:active { transform: scale(0.97); } .ds-btn:focus-visible { outline: 2px solid var(--black, #0A0A0A); outline-offset: 3px; } .ds-btn-outline-black { background: transparent; color: var(--black, #0A0A0A); border-color: var(--black, #0A0A0A); } .ds-btn-outline-black:hover { background: var(--black, #0A0A0A); color: var(--white, #FFFFFF); }"
+    },
+    {
+      "name": "Signboard",
+      "kind": "card",
+      "refersTo": "board",
+      "description": "The signature component: opaque black board with the key mark, a Heavy caps headline, one paragraph, one white button.",
+      "html": "<div class=\"ds-board\"><h2 class=\"ds-board-head\"><svg class=\"ds-mark\" viewBox=\"0 0 40 84\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" aria-hidden=\"true\"><circle cx=\"20\" cy=\"20\" r=\"16\"/><circle cx=\"20\" cy=\"20\" r=\"5\"/><path d=\"M20 36v44M20 56h10M20 68h14\"/></svg><span>Your land is worth more than what sits on it.</span></h2><p class=\"ds-board-copy\">We help owners sell hard-to-value property for what a developer would pay. <strong>Site plan. Architect's concept. Engineer's site analysis. All free with your listing.</strong></p><a class=\"ds-btn ds-btn-white\" href=\"#\">Book a free analysis</a></div>",
+      "css": ".ds-board { background: var(--board, #0A0A0A); color: var(--white, #FFFFFF); padding: clamp(28px, 3.4vw, 48px); max-width: 640px; font-family: var(--font, 'Arquitecta', 'Helvetica Neue', Arial, sans-serif); } .ds-board-head { display: flex; align-items: flex-start; gap: 18px; margin: 0; font-size: clamp(1.5rem, 0.95rem + 2vw, 2.6rem); line-height: 1.14; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; text-wrap: balance; } .ds-mark { height: 2.1em; width: auto; flex: none; margin-top: 0.08em; } .ds-board-copy { margin: 24px 0 0; font-size: clamp(1rem, 0.95rem + 0.3vw, 1.15rem); line-height: 1.6; color: rgba(255,255,255,0.86); max-width: 52ch; } .ds-board-copy strong { color: #FFFFFF; font-weight: 700; } .ds-board .ds-btn { margin-top: 30px; } .ds-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 30px; font-weight: 700; font-size: 0.875rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; border: 1.5px solid currentColor; border-radius: 0; transition: background-color 180ms ease, color 180ms ease, transform 160ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-btn:active { transform: scale(0.97); } .ds-btn-white { background: #FFFFFF; color: #0A0A0A; border-color: #FFFFFF; } .ds-btn-white:hover { background: transparent; color: #FFFFFF; } .ds-btn-white:focus-visible { outline: 2px solid #FFFFFF; outline-offset: 3px; }"
+    },
+    {
+      "name": "Caption Tab",
+      "kind": "chip",
+      "refersTo": "caption-tab",
+      "description": "Black tab on a photograph naming the project shown.",
+      "html": "<div style=\"background:#8a8f86;padding:40px 0 0 40px\"><p class=\"ds-caption-tab\">The Reserve at Flores Valley, lots under construction</p></div>",
+      "css": ".ds-caption-tab { display: inline-block; margin: 0; padding: 9px 14px; background: var(--black, #0A0A0A); color: rgba(255,255,255,0.82); font-family: var(--font, 'Arquitecta', 'Helvetica Neue', Arial, sans-serif); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }"
+    },
+    {
+      "name": "Deliverable Card",
+      "kind": "card",
+      "refersTo": "card-deliverable",
+      "description": "White card with a 1px rule border: site plan figure, Heavy caps title, Bold caps source line, grey description.",
+      "html": "<article class=\"ds-deliverable\"><div class=\"ds-deliverable-figure\"></div><div class=\"ds-deliverable-body\"><h3>Site plan</h3><p class=\"ds-deliverable-src\">Cotton Gin, site plan</p><p>How many lots or units the land can carry, drawn to scale, so the property is priced on what can be built.</p></div></article>",
+      "css": ".ds-deliverable { background: var(--white, #FFFFFF); color: var(--ink, #141414); border: 1px solid var(--rule, rgba(10,10,10,0.14)); border-radius: 0; max-width: 360px; font-family: var(--font, 'Arquitecta', 'Helvetica Neue', Arial, sans-serif); } .ds-deliverable-figure { aspect-ratio: 4 / 3; background: var(--paper-deep, #E2DFD8); overflow: hidden; } .ds-deliverable-body { padding: 24px 26px 28px; } .ds-deliverable h3 { margin: 0; font-size: 1.05rem; font-weight: 800; line-height: 1.12; text-transform: uppercase; letter-spacing: 0.06em; } .ds-deliverable-src { margin: 6px 0 0; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey, #5E5D59); } .ds-deliverable p { margin: 10px 0 0; color: var(--grey, #5E5D59); font-size: 0.98rem; line-height: 1.6; }"
+    },
+    {
+      "name": "Ledger Card",
+      "kind": "card",
+      "refersTo": "card-ledger",
+      "description": "Paper card on a black section carrying a site plan and a Bold caps project name.",
+      "html": "<div style=\"background:#0A0A0A;padding:24px;display:inline-block\"><div class=\"ds-ledger\"><div class=\"ds-ledger-figure\"></div><div class=\"ds-ledger-meta\"><b>Cameron Valley</b><span>Site plan</span></div></div></div>",
+      "css": ".ds-ledger { background: var(--paper, #EDEBE6); color: var(--ink, #141414); width: 260px; font-family: var(--font, 'Arquitecta', 'Helvetica Neue', Arial, sans-serif); } .ds-ledger-figure { aspect-ratio: 4 / 3; background: var(--paper-deep, #E2DFD8); } .ds-ledger-meta { display: flex; justify-content: space-between; gap: 12px; padding: 12px 14px 14px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; } .ds-ledger-meta span { color: var(--grey, #5E5D59); }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Underline-only field with a Bold caps label; the baseline thickens on focus.",
+      "html": "<div class=\"ds-field\"><label for=\"ds-name\">Property address <small>optional</small></label><input id=\"ds-name\" type=\"text\" placeholder=\"Street, city\"></div>",
+      "css": ".ds-field { display: flex; flex-direction: column; max-width: 360px; font-family: var(--font, 'Arquitecta', 'Helvetica Neue', Arial, sans-serif); color: var(--ink, #141414); } .ds-field label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px; } .ds-field label small { font-weight: 400; letter-spacing: 0; text-transform: none; color: var(--grey, #5E5D59); margin-left: 6px; } .ds-field input { width: 100%; padding: 14px 0; border: 0; border-bottom: 1.5px solid var(--black, #0A0A0A); border-radius: 0; background: transparent; font: inherit; font-size: 1.05rem; color: var(--ink, #141414); outline: none; transition: border-color 180ms ease; } .ds-field input::placeholder { color: var(--grey, #5E5D59); } .ds-field input:focus { border-bottom-width: 2.5px; padding-bottom: 13px; }"
+    },
+    {
+      "name": "Header Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Bold caps links with a scaling underline, and a boxed CTA that inverts on hover.",
+      "html": "<div style=\"background:#0A0A0A;padding:20px 32px\"><nav class=\"ds-nav\"><a href=\"#\">About us</a><a href=\"#\" class=\"ds-nav-active\">Contact us</a><a href=\"#\" class=\"ds-nav-cta\">Book a free analysis</a></nav></div>",
+      "css": ".ds-nav { display: flex; align-items: center; gap: 36px; color: #FFFFFF; font-family: var(--font, 'Arquitecta', 'Helvetica Neue', Arial, sans-serif); } .ds-nav a { position: relative; padding: 6px 0; font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: inherit; text-decoration: none; } .ds-nav a:not(.ds-nav-cta)::after { content: ''; position: absolute; left: 0; bottom: 0; height: 1.5px; width: 100%; background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform 220ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-nav a:not(.ds-nav-cta):hover::after, .ds-nav a.ds-nav-active::after { transform: scaleX(1); } .ds-nav-cta { border: 1.5px solid #FFFFFF; padding: 12px 20px; transition: background-color 180ms ease, color 180ms ease, transform 160ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-nav-cta:hover { background: #FFFFFF; color: #0A0A0A; } .ds-nav-cta:active { transform: scale(0.97); } .ds-nav a:focus-visible { outline: 2px solid #FFFFFF; outline-offset: 3px; }"
+    },
+    {
+      "name": "Figures Strip",
+      "kind": "custom",
+      "refersTo": "figure",
+      "description": "Measured figures in tabular Heavy numerals between 1px rules on a black section.",
+      "html": "<div style=\"background:#0A0A0A;padding:24px\"><div class=\"ds-figures\"><div><b>20+</b><span>Years of development</span></div><div><b>2,000</b><span>Residential lots</span></div><div><b>600</b><span>Condominium units</span></div></div></div>",
+      "css": ".ds-figures { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid rgba(255,255,255,0.22); border-bottom: 1px solid rgba(255,255,255,0.22); color: #FFFFFF; font-family: var(--font, 'Arquitecta', 'Helvetica Neue', Arial, sans-serif); } .ds-figures div { padding: 22px 0 22px 22px; display: flex; align-items: baseline; gap: 14px; border-left: 1px solid rgba(255,255,255,0.22); } .ds-figures div:first-child { border-left: 0; padding-left: 0; } .ds-figures b { font-weight: 800; font-size: clamp(1.6rem, 1.2rem + 1.4vw, 2.6rem); font-variant-numeric: tabular-nums; line-height: 1; } .ds-figures span { font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.7); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Development-Site Signboard",
+    "overview": "Every surface is a row of opaque black signboards standing on real aerial photography. A board carries one fact: the key mark, a headline in Arquitecta Heavy capitals, one short paragraph, one button. Photography runs full bleed to the viewport edge and the board sits on it at a hard edge, never floating, never softened by a gradient overlay. The system refuses the brokerage default of a white hero, gradient scrim, and four icon cards; the proof (site plans, before and after pairs, completed communities) does the persuading.\n\nThe palette is black and white with a single warm paper for the material site plans are drawn on. There is no green anywhere: the client replaced the former deep green with black as the brand colour on 2026-09-02. Depth comes from opacity and contrast, never from shadow. Every rectangle is square-cornered, every divider is a 1px rule, and the only icon on the site is the key-and-plot mark that stands beside board headlines.\n\nDensity is editorial rather than dashboard: generous section rhythm (72 to 140px), a 1360px measure, and boards capped at 600 to 680px so a headline breaks into three or four lines like a painted sign. Motion is restrained and reduced-motion safe: boards rise 22 to 24px on reveal, photographs unclip from the top, the hero's property-type tab cross-dissolves.\n\nThis file records the system as shipped. A designer-supplied DESIGN.md is expected and will take precedence when it arrives.",
+    "keyCharacteristics": [
+      "Opaque black boards on full-bleed aerial photography, hard-edged, no scrim",
+      "Black, white, and one warm paper; no green, no accent hue",
+      "Arquitecta only: Heavy 800 capitals for every heading, Regular 400 for copy, Bold 700 for labels and buttons",
+      "The key mark beside board headlines is the only icon",
+      "Zero radius, zero shadow, 1px rules for every division",
+      "Every photograph carries a black caption tab naming the project",
+      "Strict inversion: black surfaces on the white page, paper and white surfaces on black sections"
+    ],
+    "rules": [
+      { "name": "The No Green Rule", "body": "Black is the brand colour. No green, and no other accent hue, appears anywhere on the site. If a state needs signalling, do it with inversion (black to white, white to black), not with colour.", "section": "colors" },
+      { "name": "The Football Kit Rule", "body": "Surfaces invert strictly with their ground. On the white page, boards and buttons are black. On a black section, cards are paper or white and the button is white. The key mark stays white on every board; it never changes colour with the ground.", "section": "colors" },
+      { "name": "The One Paper Rule", "body": "Paper is reserved for surfaces that carry site plans, lot plans, and concept drawings. It is never used as a general alternate section colour.", "section": "colors" },
+      { "name": "The Heavy Caps Rule", "body": "Every h1, h2, and h3 is Arquitecta Heavy 800, uppercase, tracked 0.06em, with balanced wrapping. There is no sentence-case heading anywhere in the system.", "section": "typography" },
+      { "name": "The Mark Beside the Headline Rule", "body": "A board headline begins with the white key mark (gg-mark-solo-white.svg) at 2.1em tall, aria-hidden, 18px before the text. The mark is the only icon in the system; the legacy icon PNGs in assets/images are unreferenced.", "section": "typography" },
+      { "name": "The No Dash Rule", "body": "No em dash or en dash appears in rendered text. Use a full stop, a comma, or a new sentence. Hyphens are fine (\"hard-to-value\", \"highest-and-best\").", "section": "typography" },
+      { "name": "The Loteria Rule", "body": "Every photograph and drawing is captioned with its real project name in a Bold caps label. No uncaptioned imagery, no invented project names.", "section": "typography" },
+      { "name": "The Board at the Edge Rule", "body": "A board on a photograph always touches the bottom of the viewport section (align flex-end) and the photo runs behind it to the section edge. No board floats mid-image and no photo gets a gradient scrim to make text legible; the board's opacity is the legibility.", "section": "layout" },
+      { "name": "The Hard Edge Rule", "body": "No box shadow, no blur, no gradient overlay on photography, no translucent panel over an image. If an element needs to sit on a photograph, it is an opaque black board or a black caption tab.", "section": "elevation" },
+      { "name": "The Zero Radius Rule", "body": "No element may carry a border radius. Not a pill, not a chip, not a 2px softening on a card.", "section": "shapes" }
+    ],
+    "dos": [
+      "Do set every heading in Arquitecta Heavy 800, uppercase, tracked 0.06em, and every button, tab, and label in Arquitecta Bold 700 uppercase.",
+      "Do put text over photography only inside an opaque board-black rectangle or a black caption tab.",
+      "Do begin every board headline with the white key mark (gg-mark-solo-white.svg) at 2.1em.",
+      "Do caption every photograph and drawing with its real project name in a Bold caps label.",
+      "Do divide with 1px hairline rules (rgba black 14% on light, rgba white 22% on black) and outline interactive elements with 1.5px solid currentColor.",
+      "Do invert on hover (fill to text, text to fill) and scale to 0.97 on press.",
+      "Do reserve paper for surfaces that carry site plans and drawings.",
+      "Do keep board copy at or under 52ch and at 86% white, with Bold emphasis returning to full white.",
+      "Do keep the header transparent over the hero and switch it to opaque black after 40px of scroll.",
+      "Do honour prefers-reduced-motion: every reveal instant, the rotator still."
+    ],
+    "donts": [
+      "Don't use green, or any hue other than black, white, paper, and the greys; the contact form's error red is the single exception and stays there.",
+      "Don't add a border radius to anything, including form fields and images.",
+      "Don't use box shadows, blur, gradient overlays, or translucent panels on photographs.",
+      "Don't introduce icons beyond the key mark; no glyph icon sets, no icon cards, and never the legacy icon PNGs in assets/images.",
+      "Don't set an em dash or en dash in rendered text.",
+      "Don't add label strips above headlines on boards or sections; the hero board's white property-type tab exists because it carries the rotating service line, not as an eyebrow, and is the only one.",
+      "Don't use sentence-case or lighter-weight headings, or a second typeface; Arquitecta at 400, 700, and 800 is the whole type system.",
+      "Don't let two adjacent sections share a ground without a photograph between them.",
+      "Don't invent testimonials, prices, or project names for captions; only Greenfield's own work is shown, named as it is."
+    ]
+  }
+}

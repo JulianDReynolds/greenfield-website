@@ -4,84 +4,189 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About us | Greenfield Group</title>
-  <meta name="description" content="Greenfield Group is a Florida real estate practice focused on development properties, with more than 20 years of hands-on development experience.">
-  <meta property="og:title" content="About Us | Greenfield Group">
-  <meta property="og:description" content="We help owners navigate the sale of hard-to-value assets and help developers privately connect with property owners ahead of the broader market.">
+  <meta name="description" content="Greenfield Group is a Florida real estate practice focused on development properties, led by a team with more than 20 years of hands-on development experience.">
+  <meta property="og:title" content="About us | Greenfield Group">
+  <meta property="og:description" content="We don't just list property, we underwrite it. Every site is evaluated for zoning, entitlements, utilities, and highest-and-best use before it goes to market.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/images/gg-logo.png">
   <link rel="icon" type="image/svg+xml" href="assets/images/gg-logo.svg">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/fonts/arquitecta-heavy.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="assets/fonts/arquitecta-regular.otf" as="font" type="font/otf" crossorigin>
+  <link rel="stylesheet" href="css/style.css?v=20260902">
 </head>
 <body>
 
   <!-- Header -->
-  <header class="site-header">
-    <nav class="header-nav">
-      <div class="container nav-inner">
-        <a href="index.html" class="logo">
-          <img src="assets/images/gg-logo.svg" alt="Greenfield Group Land Solutions" class="logo-dark">
-          <img src="assets/images/gg-logo-white.svg" alt="Greenfield Group Land Solutions" class="logo-light">
-        </a>
-        <ul class="nav-links">
-          <li><a href="about.html" class="active">About us</a></li>
-          <li><a href="contact.html">Contact us</a></li>
-        </ul>
-        <button class="mobile-menu-toggle" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
+  <header class="site-header solid">
+    <div class="nav-inner">
+      <a href="index.html" class="logo" aria-label="Greenfield Group Land Solutions, home">
+        <img src="assets/images/gg-logo-white.svg" alt="Greenfield Group Land Solutions" width="455" height="168">
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="about.html" class="active" aria-current="page">About us</a>
+        <a href="contact.html">Contact us</a>
+        <a href="contact.html" class="nav-cta">Book a free analysis</a>
+      </nav>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+      <a href="index.html">Home</a>
+      <a href="about.html">About us</a>
+      <a href="contact.html">Contact us</a>
+      <a href="contact.html" class="btn btn-white">Book a free analysis</a>
+      <p class="mobile-nav-contact">
+        <a href="tel:+12147790922">+1 214-779-0922</a><br>
+        <a href="mailto:sales@greenfieldfl.com">sales@greenfieldfl.com</a>
+      </p>
     </nav>
-    <ul class="mobile-nav">
-      <li><a href="about.html">About us</a></li>
-      <li><a href="contact.html">Contact us</a></li>
-    </ul>
   </header>
 
-  <!-- Page Hero -->
-  <section class="page-hero">
-    <div class="container">
-      <h1 class="fade-in">About us</h1>
-    </div>
-  </section>
+  <main>
 
-  <!-- About Content -->
-  <section class="about-content">
-    <div class="container">
-      <div class="about-text-centered fade-in-up">
-        <p>Greenfield Group is a Florida real estate practice focused on development properties. We help owners navigate the sale of hard-to-value assets and help developers privately connect with property owners ahead of the broader market.</p>
-        <!-- Team paragraph: swap for the "Led by Julian Reynolds" version if the client prefers a named principal -->
-        <p>Our team brings more than 20 years of hands-on development experience, including the entitlement, development, and sale of approximately 2,000 residential lots and the delivery of roughly 600 condominium units. We have negotiated complex development, disposition, and joint venture transactions on both sides of the table. This means we value property the way buyers do, and negotiate the way owners need.</p>
-        <p>That development background is our edge: we don't just list property, we underwrite it. Every site is evaluated for zoning, entitlements, utilities, and highest-and-best use before it goes to market.</p>
+    <!-- Page hero -->
+    <section class="page-hero" aria-labelledby="aboutHead">
+      <img class="hero-media" src="assets/images/site/avalon-aerial-day.webp" alt="Aerial rendering of The Avalon mixed use redevelopment in its city setting" width="2400" height="1485" fetchpriority="high">
+      <div class="page-hero-inner">
+        <div class="board">
+          <h1 class="board-head" id="aboutHead"><img class="mark" src="assets/images/gg-mark-solo-white.svg" alt="" aria-hidden="true"><span>We don't just list property. We underwrite it.</span></h1>
+        </div>
+        <p class="sign-caption">The Avalon, redevelopment concept</p>
       </div>
-      <div class="section-cta fade-in-up">
-        <a href="contact.html" class="btn btn-green">Contact us</a>
+    </section>
+
+    <!-- About content -->
+    <section class="about">
+      <div class="container about-grid">
+        <h2 class="reveal">A Florida real estate practice focused on development properties.</h2>
+        <div class="about-text reveal">
+          <p>Greenfield Group is a Florida real estate practice focused on development properties. We help owners navigate the sale of hard-to-value assets and help developers privately connect with property owners ahead of the broader market.</p>
+          <p>Our team brings more than 20 years of hands-on development experience, including the entitlement, development, and sale of approximately 2,000 residential lots and the delivery of roughly 600 condominium units. We have negotiated complex development, disposition, and joint venture transactions on both sides of the table. This means we value property the way buyers do, and negotiate the way owners need.</p>
+          <p>That development background is our edge: we don't just list property, we underwrite it. Every site is evaluated for zoning, entitlements, utilities, and highest-and-best use before it goes to market.</p>
+          <a href="contact.html" class="btn btn-black">Contact us</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- Track record -->
+    <section class="record on-black" aria-labelledby="workHead">
+      <div class="container">
+        <div class="record-head">
+          <h2 class="display reveal" id="workHead">Work we have entitled, planned, and delivered.</h2>
+          <p class="reveal">From single lots to master planned communities and urban redevelopment. Site plans, lot plans, and completed communities from our team's development work.</p>
+        </div>
+        <div class="figures reveal">
+          <div><b class="num">20+</b><span>Years of development</span></div>
+          <div><b class="num">2,000</b><span>Residential lots</span></div>
+          <div><b class="num">600</b><span>Condominium units</span></div>
+        </div>
+        <ul class="ledger stagger">
+          <li class="reveal" style="--i:0">
+            <div class="ledger-figure"><img src="assets/images/site/plan-cameron-valley.webp" alt="Cameron Valley site plan" loading="lazy" width="1600" height="1066"></div>
+            <div class="ledger-meta"><b>Cameron Valley</b><span>Site plan</span></div>
+          </li>
+          <li class="reveal" style="--i:1">
+            <div class="ledger-figure"><img src="assets/images/site/plan-cotton-gin.webp" alt="Cotton Gin site plan" loading="lazy" width="1465" height="1600"></div>
+            <div class="ledger-meta"><b>Cotton Gin</b><span>Site plan</span></div>
+          </li>
+          <li class="reveal" style="--i:2">
+            <div class="ledger-figure"><img src="assets/images/site/plan-flores-valley.webp" alt="The Reserve at Flores Valley lot plan" loading="lazy" width="1600" height="890"></div>
+            <div class="ledger-meta"><b>Flores Valley</b><span>Lot plan</span></div>
+          </li>
+          <li class="reveal" style="--i:3">
+            <div class="ledger-figure"><img src="assets/images/site/plan-forest-oaks.webp" alt="Forest Oaks site plan" loading="lazy" width="1600" height="1212"></div>
+            <div class="ledger-meta"><b>Forest Oaks</b><span>Site plan</span></div>
+          </li>
+          <li class="reveal" style="--i:4">
+            <div class="ledger-figure"><img src="assets/images/site/plan-project-54.webp" alt="Project 54 site plan" loading="lazy" width="1600" height="1507"></div>
+            <div class="ledger-meta"><b>Project 54</b><span>Site plan</span></div>
+          </li>
+          <li class="reveal" style="--i:5">
+            <div class="ledger-figure"><img src="assets/images/site/plan-project-foster.webp" alt="Project Foster site plan" loading="lazy" width="1600" height="890"></div>
+            <div class="ledger-meta"><b>Project Foster</b><span>Site plan</span></div>
+          </li>
+          <li class="reveal" style="--i:6">
+            <div class="ledger-figure"><img src="assets/images/site/plan-project-watson.webp" alt="Project Watson site layout" loading="lazy" width="1600" height="1005"></div>
+            <div class="ledger-meta"><b>Project Watson</b><span>Site layout</span></div>
+          </li>
+          <li class="reveal" style="--i:7">
+            <div class="ledger-figure photo"><img src="assets/images/site/mill-street.webp" alt="Rendering of the Mill Street mixed use building" loading="lazy" width="2000" height="1412"></div>
+            <div class="ledger-meta"><b>Mill Street</b><span>Concept</span></div>
+          </li>
+        </ul>
+        <div class="gallery stagger">
+          <figure class="reveal" style="--i:0">
+            <img src="assets/images/site/community-entrance.webp" alt="Entrance monument sign of The Reserve at Flores Valley" loading="lazy" width="1600" height="1066">
+            <figcaption>The Reserve at Flores Valley, entrance</figcaption>
+          </figure>
+          <figure class="reveal" style="--i:1">
+            <img src="assets/images/site/community-aerial-3.webp" alt="Aerial view of streets and completed homes at The Reserve at Flores Valley" loading="lazy" width="1600" height="1066">
+            <figcaption>The Reserve at Flores Valley, aerial</figcaption>
+          </figure>
+          <figure class="reveal" style="--i:2">
+            <img src="assets/images/site/avalon-aerial-night.webp" alt="Aerial rendering at dusk of The Avalon mixed use redevelopment" loading="lazy" width="2400" height="1363">
+            <figcaption>The Avalon, mixed use redevelopment</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing board -->
+    <section class="close" aria-labelledby="closeHead">
+      <div class="container">
+        <div class="board close-board reveal">
+          <div>
+            <h2 class="board-head" id="closeHead"><img class="mark" src="assets/images/gg-mark-solo-white.svg" alt="" aria-hidden="true"><span>Selling a hard-to-value property, or looking for your next site?</span></h2>
+            <p class="board-copy">Tell us about your property or the site you are looking for and we will come back to you promptly.</p>
+            <a href="contact.html" class="btn btn-white">Contact us</a>
+          </div>
+          <div class="close-contact">
+            <a href="tel:+12147790922"><small>Phone</small>+1 214-779-0922</a>
+            <a href="mailto:sales@greenfieldfl.com"><small>Email</small>sales@greenfieldfl.com</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <!-- Footer -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-logo">
-        <img src="assets/images/gg-logo-white.svg" alt="Greenfield Group Land Solutions">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-logo">
+          <img src="assets/images/gg-logo-white.svg" alt="Greenfield Group Land Solutions" width="455" height="168">
+          <p>A Florida real estate practice focused on development property. Boca Raton, Florida.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Services</h3>
+          <a href="index.html#older-homes">Older homes</a>
+          <a href="index.html#vacant-land">Vacant land</a>
+          <a href="index.html#commercial">Commercial sites</a>
+          <a href="index.html#master-planned">Master planned communities</a>
+        </div>
+        <div class="footer-col">
+          <h3>Company</h3>
+          <a href="about.html">About us</a>
+          <a href="contact.html">Contact us</a>
+          <a href="privacy.html">Privacy policy</a>
+          <a href="cookies.html">Cookies policy</a>
+        </div>
+        <div class="footer-col">
+          <h3>Contact</h3>
+          <a href="tel:+12147790922">+1 214-779-0922</a>
+          <a href="mailto:sales@greenfieldfl.com">sales@greenfieldfl.com</a>
+          <span>Boca Raton, Florida</span>
+        </div>
       </div>
-      <div class="footer-contact">
-        <p>T: +1 214-779-0922 | E: sales@greenfieldfl.com</p>
-      </div>
-      <div class="footer-legal">
-        <p>LEGAL: <a href="privacy.html">Privacy policy</a> | <a href="cookies.html">Cookies policy</a></p>
-      </div>
-      <div class="footer-credit">
-        <p>&copy; Greenfield Group | Florida License SL3660901</p>
+      <div class="footer-bottom">
+        <p>&copy; Greenfield Group</p>
+        <p>Florida License SL3660901</p>
       </div>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=20260902"></script>
 </body>
 </html>
