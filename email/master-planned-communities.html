@@ -19,9 +19,9 @@
   <![endif]-->
   <style type="text/css">
     :root { color-scheme: light; supported-color-schemes: light; }
-    /* Gmail app dark mode: keep white text on the black boards (blend-mode technique, Gmail only) */
-    u + .body .gmail-blend-screen { background: #000000; mix-blend-mode: screen; }
-    u + .body .gmail-blend-difference { background: #000000; mix-blend-mode: difference; }
+    /* Gmail app dark mode: paint text with a fixed gradient Gmail cannot invert (Gmail only) */
+    u + .body .gmail-white, u + .body .gmail-white a { background-image: linear-gradient(#FFFFFF, #FFFFFF) !important; -webkit-background-clip: text !important; background-clip: text !important; color: transparent !important; }
+    u + .body .gmail-grey { background-image: linear-gradient(#A9A8A3, #A9A8A3) !important; -webkit-background-clip: text !important; background-clip: text !important; color: transparent !important; }
     @font-face { font-family: 'Arquitecta'; src: url('https://greenfieldgroupfl.com/assets/fonts/arquitecta-regular.otf') format('opentype'); font-weight: 400; font-style: normal; }
     @font-face { font-family: 'Arquitecta'; src: url('https://greenfieldgroupfl.com/assets/fonts/arquitecta-bold.otf') format('opentype'); font-weight: 700; font-style: normal; }
     @font-face { font-family: 'Arquitecta'; src: url('https://greenfieldgroupfl.com/assets/fonts/arquitecta-heavy.otf') format('opentype'); font-weight: 800; font-style: normal; }
@@ -86,11 +86,11 @@
                     <img class="mark" src="https://greenfieldgroupfl.com/assets/images/email/key-mark.png" width="34" alt="" style="display:block; width:34px; height:auto;" />
                   </td>
                   <td valign="top">
-                    <div class="gmail-blend-screen"><div class="gmail-blend-difference"><h1 class="headline" style="margin:0; font-family:'Arquitecta', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:30px; line-height:36px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; color:#FFFFFF;">Don't sell your land to the middleman. Be the middleman.</h1></div></div>
+                    <h1 class="headline gmail-white" style="margin:0; font-family:'Arquitecta', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:30px; line-height:36px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; color:#FFFFFF;">Don't sell your land to the middleman. Be the middleman.</h1>
                   </td>
                 </tr>
               </table>
-              <div class="gmail-blend-screen"><div class="gmail-blend-difference"><p style="margin:22px 0 0 0; font-family:'Arquitecta', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:27px; line-height:36px; color:#FFFFFF;">Free entitlement management with your listing. Only available for select properties.</p></div></div>
+              <p class="gmail-white" style="margin:22px 0 0 0; font-family:'Arquitecta', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:27px; line-height:36px; color:#FFFFFF;">Free entitlement management with your listing. Only available for select properties.</p>
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-top:28px;">
                 <tr>
                   <td align="center" bgcolor="#FFFFFF" style="background-color:#FFFFFF;">
@@ -114,16 +114,16 @@
                   </td>
                 </tr>
               </table>
-              <div class="gmail-blend-screen"><div class="gmail-blend-difference"><p style="margin:18px 0 10px 0; font-family:'Arquitecta', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:14px; line-height:22px; color:#FFFFFF;">
+              <p class="gmail-white" style="margin:18px 0 10px 0; font-family:'Arquitecta', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:14px; line-height:22px; color:#FFFFFF;">
                 <a href="tel:+12147790922" style="color:#FFFFFF;">+1 214-779-0922</a> &middot;
                 <a href="mailto:sales@greenfieldfl.com" style="color:#FFFFFF;">sales@greenfieldfl.com</a> &middot;
                 <a href="https://greenfieldgroupfl.com" style="color:#FFFFFF;">greenfieldgroupfl.com</a>
               </p>
-              <p style="margin:0 0 10px 0; font-family:'Arquitecta', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:12px; line-height:18px; color:#A9A8A3;">
+              <p class="gmail-grey" style="margin:0 0 10px 0; font-family:'Arquitecta', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:12px; line-height:18px; color:#A9A8A3;">
                 You are receiving this email because of your ownership of acreage in Florida.<br />
-                <a href="[UnsubscribeURL]" style="color:#FFFFFF; text-decoration:underline;">Unsubscribe</a>
+                <a href="[UnsubscribeURL]" class="gmail-white" style="color:#FFFFFF; text-decoration:underline;">Unsubscribe</a>
               </p>
-              <p style="margin:0; font-family:'Arquitecta', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:12px; line-height:18px; color:#A9A8A3;">&copy; Greenfield Group &middot; Florida License SL3660901</p></div></div>
+              <p class="gmail-grey" style="margin:0; font-family:'Arquitecta', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:12px; line-height:18px; color:#A9A8A3;">&copy; Greenfield Group &middot; Florida License SL3660901</p>
             </td>
           </tr>
 
