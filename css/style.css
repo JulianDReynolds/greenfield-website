@@ -738,6 +738,8 @@ p + p { margin-top: 1em; }
 .page-hero .board { width: min(100%, 680px); }
 .page-hero.compact .board { padding: 0; background: transparent; }
 .page-hero.compact .board-head { font-size: clamp(2rem, 1.2rem + 3vw, 4rem); }
+.page-hero.compact .board-head .mark { height: 1.15em; margin-top: 0.02em; }
+.page-hero.compact .board-copy { margin-top: 18px; font-size: clamp(1.1rem, 1rem + 0.5vw, 1.35rem); }
 .page-hero.compact .board-copy { color: rgba(255,255,255,0.75); }
 
 /* ---------- About ---------- */
@@ -767,7 +769,7 @@ p + p { margin-top: 1em; }
 .contact-info h2 { font-size: clamp(1.4rem, 1.1rem + 1.2vw, 2.1rem); }
 .contact-info > p { margin-top: 16px; color: var(--grey); max-width: 44ch; }
 .contact-details {
-  margin-top: 40px;
+  margin-top: 0;
   display: flex;
   flex-direction: column;
 }
@@ -778,6 +780,7 @@ p + p { margin-top: 1em; }
   padding: 18px 0;
   border-top: 1px solid var(--rule);
 }
+.contact-item:first-child { border-top: 0; padding-top: 4px; }
 .contact-item:last-child { border-bottom: 1px solid var(--rule); }
 .contact-item strong {
   font-size: 0.72rem;
