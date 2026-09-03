@@ -392,6 +392,9 @@ p + p { margin-top: 1em; }
   animation: board-in 900ms var(--ease-out) both;
   animation-delay: 120ms;
 }
+.hero-board .board-head {
+  font-size: clamp(1.125rem, 0.71rem + 1.5vw, 1.95rem);
+}
 .hero-caption {
   align-self: flex-end;
   margin: 18px 0 0;
